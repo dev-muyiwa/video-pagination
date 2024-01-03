@@ -8,7 +8,7 @@ const PORT: number = 3000;
 const outputDirectory: string = 'output-chunks';
 
 const chunkDuration: number = 10;
-const videoPath: string = "path-to-video.mp4"
+const videoPath: string = "C:\\Users\\Intern\\Downloads\\Giorno's Theme _ EASY to EXPERT But....mp4";
 
 
 ffmpeg.setFfmpegPath("C:\\Users\\Intern\\Documents\\ffmpeg-6.0-essentials_build\\bin\\ffmpeg.exe");
