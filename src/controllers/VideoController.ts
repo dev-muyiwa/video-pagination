@@ -74,16 +74,17 @@ export default async function transcodeVideo(
         mkdirSync(resolutionDir, { recursive: true });
       }
 
-      const variantPlaylistPath = join(
-        outputDir,
-        variant.resolution,
-        `${filename}.m3u8`
-      );
+      // const variantPlaylistPath = join(
+      //   variant.resolution,
+      //   `${filename}.m3u8`
+      // );
+      const variantPlaylistPath = variant.resolution + "/" + `${filename}.m3u8`;
 
       ffmpeg(inputFilePath)
         .setFfmpegPath(ffmpegInstaller.path)
         .setFfprobePath(ffProbeInstaller.path)
         .format("hls")
+        // .hls_time("10")
         .outputOptions(outputOptions)
         .output(join(outputDir, variant.resolution, `${filename}.m3u8`))
         .videoCodec("libx264")
